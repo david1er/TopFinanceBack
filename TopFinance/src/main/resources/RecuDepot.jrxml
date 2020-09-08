@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.5.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RecuDepot" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3af8496c-9e1c-45b2-80cb-8088076fa873">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="MyCollectionDataSet" uuid="5c23c3c4-1aab-46aa-b042-821b18734bf1">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="numero_operation" class="java.lang.Integer"/>
+		<field name="montant" class="java.lang.Double"/>
+		<field name="date_operation" class="java.util.Date"/>
+	</subDataset>
+	<parameter name="ColletionBeanParam" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="date_operation" class="java.util.Date"/>
+	<parameter name="numero_operation" class="java.lang.Integer"/>
+	<parameter name="montant" class="java.lang.Double"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="40" width="240" height="30" uuid="3986dd37-b779-4225-940c-af902f755f25"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Adobe Caslon Pro Bold" size="18" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Bordereau de versement]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="229" splitType="Stretch">
+			<textField>
+				<reportElement x="92" y="70" width="100" height="30" uuid="ea7b1e14-9001-41e0-a726-a2bb9005d067"/>
+				<textFieldExpression><![CDATA[$P{date_operation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="82" width="100" height="30" uuid="fb6e634b-e088-420e-b168-da24d140ec29"/>
+				<textFieldExpression><![CDATA[$P{date_operation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="165" width="100" height="30" uuid="b2bcf87a-fd08-45db-b6ad-05b34cb5a65f"/>
+				<textFieldExpression><![CDATA[$P{numero_operation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="151" width="100" height="30" uuid="a801b988-3925-422d-8efa-802b12a5dc67"/>
+				<textFieldExpression><![CDATA[$P{montant}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
